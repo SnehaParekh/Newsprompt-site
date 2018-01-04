@@ -1,0 +1,316 @@
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+
+.clearfix:before,
+.clearfix:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+/*
+  ========================================
+  Font
+  ========================================
+*/
+
+@font-face {
+    font-family: "montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+    font-family: "montserrat-light";
+    src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+/*
+  ========================================
+  Body
+  ========================================
+*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-color: #fff;
+    min-width: 529px;
+}
+h1 {
+    font-size: 3.2em;
+    margin-bottom: 30px;
+    font-family: montserrat;
+    overflow-wrap: break-word;
+}
+h4 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-family: montserrat-light;
+}
+h5 {
+    font-size: 1em;
+    font-family: montserrat;
+}
+
+/*
+  ========================================
+  Jumbotron - Header
+  ========================================
+*/
+
+.jumbotron {
+    background-image: url(../images/jumbotron.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.heading {
+  padding:30px;
+}
+.text-container > * {
+    margin-bottom: 50px;
+}
+#logo {
+    display: inline-block;
+}
+.social-media-icons {
+    float: right;
+}
+.social-media-icons ul li {
+    display: inline;
+    color: white;
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+.jumbotron header {
+    padding: 50px;
+    margin-bottom: 20px;
+}
+.text-container {
+    text-align: center;
+}
+#play {
+    font-size: 8em;
+    display: inline-block;
+}
+#play a {
+    text-decoration: none;
+}
+.btn {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 15px 25px;
+    height: 100%;
+    line-height: 100%;
+    width: 300px;
+}
+.btn-jumbotron h5 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-family: montserrat;
+    display: inline;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.btn-jumbotron img {
+    vertical-align: middle;
+}
+.jumbotron footer {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    bottom: 2vh;
+}
+
+.jumbotron footer i {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.jumbotron footer h4 {
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+
+
+/*
+  ========================================
+  Main Content - Benefits
+  ========================================
+*/
+
+.benefits {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    border-bottom:1px solid rgba(0,0,0,0.14);
+}
+.benefits-text,
+.benefits-image {
+    width: 50%;
+    flex-grow: 1;
+}
+.benefits-text {
+    text-align: left;
+    padding:100px;
+}
+.benefits-image {
+    text-align: right;
+}
+.alt .benefits-image {
+    text-align: left;
+    order: -1;
+}
+
+.benefits-independent {
+    text-align: center;
+    padding:100px 50px;
+    border-bottom:1px solid rgba(0,0,0,0.14);
+}
+
+.content-icon {
+    color:#FE9352;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.btn-content {
+    background-color: #3E82F7;
+    color:white;
+}
+
+.benefits-image img {
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+/*
+  ========================================
+    Footer
+  ========================================
+*/
+
+footer .social-media-icons .zmdi-facebook{
+    color:#2D448E;
+}
+
+footer .social-media-icons .zmdi-twitter {
+    color: #48BEEA;
+}
+
+footer .social-media-icons .zmdi-linkedin-box {
+    color: #2D6F87;
+}
+
+footer {
+    margin:70px 0;
+    text-align: center;
+}
+
+footer .social-media-icons {
+    float:none;
+    margin-bottom:20px;
+}
+
+footer a {
+    color: blue;
+}
+
+
+/*
+  ========================================
+  Media Queries
+  ========================================
+*/
+@media all and (max-width: 999px) and (min-width: 861px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h4{
+    font-size: 1.2em;
+  }
+
+  .benefits-text {
+    padding: 25px;
+  }
+}
+
+@media all and (max-width: 860px) and (min-width: 530px) {
+
+  .benefits {
+    flex-direction:  column;
+    margin-top: 10px;
+    border-bottom:4px solid rgba(0,0,0,0.14);
+     overflow-wrap: break-word;
+    word-wrap: break-word; 
+  }
+
+  .benefits-text,
+  .benefits-image {
+      width: 100%;
+      flex-grow: 1;
+  }
+  .benefits-text {
+      text-align: center;
+      padding:50px;
+
+  }
+  .benefits-image {
+      text-align: center;
+      max-width: 100%;
+  }
+  .alt .benefits-image {
+      text-align: center;
+      order: 2;
+  }
+
+  .benefits-independent {
+    border-bottom:4px solid rgba(0,0,0,0.14);
+    padding:50px;
+  }
+
+  .text-wrap {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 3em;
+    overflow-wrap: break-word;
+
+  }
+  h4 {
+      font-size: 1.2em;
+  }
+
+}
